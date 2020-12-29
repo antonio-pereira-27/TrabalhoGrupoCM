@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "819547312699",
+    "project_id": "trabalhogrupo-9cf0c",
+    "storage_bucket": "trabalhogrupo-9cf0c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:819547312699:android:eedac6f60d608e7b0c421e",
+        "android_client_info": {
+          "package_name": "ipca.avaliacao.trabalhogrupo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "819547312699-39gjgcr2v3pumon4snbqi2s0ahqbtcok.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClmwZQVt-nQXp5ENZBKbrt9HG7LULko5E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "819547312699-39gjgcr2v3pumon4snbqi2s0ahqbtcok.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
