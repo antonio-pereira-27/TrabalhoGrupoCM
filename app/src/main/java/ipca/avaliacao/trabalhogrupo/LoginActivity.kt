@@ -15,7 +15,7 @@ import com.google.firebase.ktx.Firebase
 
 
 class LoginActivity : AppCompatActivity() {
-
+    // variáveis
     private val TAG =  "Login"
     private lateinit var authentication: FirebaseAuth
 
