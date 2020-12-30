@@ -9,10 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TrabalhoGrupo">
+        <activity android:name=".ChooseTeamActivity"
+            android:screenOrientation="landscape">
+
+        </activity>
+        <activity android:name=".Squad"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Practice"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".MainMenu"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".RegistActivity"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".LoginActivity"
-            android:screenOrientation="landscape">
-        </activity>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".MainActivity"
             android:screenOrientation="landscape">
