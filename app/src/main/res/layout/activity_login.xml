@@ -15,6 +15,7 @@
         android:background="#E80C0C"
         android:ems="10"
         android:inputType="textPassword"
+        android:text = "topistasnabos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.936"
@@ -35,6 +36,7 @@
 
     <EditText
         android:id="@+id/editTextEmail"
+        android:text = "pedro.vsc.jogos@gmail.com"
         android:layout_width="207dp"
         android:layout_height="49dp"
         android:layout_marginEnd="36dp"

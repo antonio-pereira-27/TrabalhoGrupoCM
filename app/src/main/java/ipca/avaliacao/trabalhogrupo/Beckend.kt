@@ -3,63 +3,45 @@ package ipca.avaliacao.trabalhogrupo
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.AsyncTask
+import android.util.Log
+import okhttp3.OkHttpClient
+import okhttp3.Request
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.net.HttpURLConnection
 import java.net.URL
 import kotlin.coroutines.resume
 import kotlin.coroutines.suspendCoroutine
+import kotlin.math.log
 
 class Beckend {
     companion object{
         suspend fun getTeams() : String = suspendCoroutine {
             var result = ""
-            try{
-                val urlc : HttpURLConnection = URL("https://github.com/openfootball/football.json/blob/master/2020-21/pt.1.clubs.json").openConnection() as HttpURLConnection
-                urlc.setRequestProperty("User-Agent", "Test")
-                urlc.setRequestProperty("Connection", "close")
-                urlc.setConnectTimeout(1500)
-                urlc.connect()
-                val stream = urlc.inputStream
-                val isReader = InputStreamReader(stream)
-                val brin = BufferedReader(isReader)
-                var str: String = ""
 
-                var keepReading = true
-                while (keepReading) {
-                    var line = brin.readLine()
-                    if (line == null) {
-                        keepReading = false
-                    } else {
-                        str += line
-                    }
-                }
-                brin.close()
-                result = str
-            }catch (e: Exception) {
-                e.printStackTrace()
-                result = "Sem internet!"
+
+            val client = OkHttpClient()
+
+            val request = Request.Builder()
+                .url("https://api-football-v1.p.rapidapi.com/v2/teams/league/2826")
+                .get()
+                .addHeader("x-rapidapi-key", "f5d65a9065msh8bb619a81c4131cp18113ejsnd843ff142416")
+                .addHeader("x-rapidapi-host", "api-football-v1.p.rapidapi.com")
+                .build()
+
+
+            val response = client.newCall(request).execute()
+            Log.e("teste", response.body()?.string().toString())
+            val stream = response.body()?.string()
+
+            if (stream != null) {
+                result = stream
             }
+            else {
+                result = "Sem Internet!"
+            }
+
             it.resume(result)
-        }
-
-        fun getBitmapFromUr(urlString: String, onBitmapResult: (Bitmap) -> Unit) {
-            object : AsyncTask<Unit, Unit, Bitmap>() {
-                override fun doInBackground(vararg p0: Unit?): Bitmap {
-                    val input = URL(urlString).openStream()
-                    var bmp = BitmapFactory.decodeStream(input)
-                    return bmp
-                }
-
-                override fun onPostExecute(result: Bitmap?) {
-                    super.onPostExecute(result)
-                    result?.let {
-                        onBitmapResult.invoke(result)
-                    }
-
-                }
-
-            }.execute(null, null, null)
         }
     }
 }

@@ -3,6 +3,7 @@ package ipca.avaliacao.trabalhogrupo
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
@@ -17,7 +18,7 @@ import org.json.JSONObject
 class ChooseTeamActivity : AppCompatActivity() {
 
     var teams : MutableList<Team> = ArrayList()
-    var teamsAdapter = TeamsAdapter()
+    lateinit var teamsAdapter : TeamsAdapter
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,7 +26,10 @@ class ChooseTeamActivity : AppCompatActivity() {
         setContentView(R.layout.activity_choose_team)
 
         val listViewTeams = findViewById<ListView>(R.id.listView_Teams)
+        teamsAdapter = TeamsAdapter()
         listViewTeams.adapter = teamsAdapter
+
+        teams.add(Team(1,"teste", "teste","teste","teste","teste",1))
 
          GlobalScope.async{
             var result = Beckend.getTeams()
@@ -35,15 +39,18 @@ class ChooseTeamActivity : AppCompatActivity() {
                 }
             } else {
                 val jsonObject = JSONObject(result)
-                if (jsonObject.get("status").equals("ok")) {
+
+                val jsonObjectResult = JSONObject(jsonObject.get("api").toString())
+                if (jsonObjectResult.get("results") != 0) {
+                    Log.e("colhoes", jsonObject.toString())
                     runOnUiThread {
                         Toast.makeText(this@ChooseTeamActivity, "Sem internet!", Toast.LENGTH_LONG).show()
                     }
-                    var jsonArray: JSONArray = jsonObject.getJSONArray("articles")
+                    var jsonArray: JSONArray = jsonObject.getJSONArray("teams")
                     for (index in 0 until jsonArray.length()) {
-                        val jsonArticle = jsonArray.getJSONObject(index)
-                        val article = Team.fromJson(jsonArticle)
-                        teams.add(article)
+                        val jsonTeam = jsonArray.getJSONObject(index)
+                        val team = Team.fromJson(jsonTeam)
+                        teams.add(team)
                     }
                     runOnUiThread{
                         teamsAdapter.notifyDataSetChanged()
@@ -73,8 +80,8 @@ class ChooseTeamActivity : AppCompatActivity() {
             val textViewTeamName = rowView.findViewById<TextView>(R.id.textViewTeamName)
             val textViewCountry = rowView.findViewById<TextView>(R.id.textViewCountry)
 
-            textViewTeamName.text = teams[position].name
-            textViewCountry.text = teams[position].country
+            textViewTeamName.text = teams[position].nome
+            textViewCountry.text = teams[position].pais
 
             rowView.isClickable = true
             rowView.setOnClickListener{
