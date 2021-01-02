@@ -14,88 +14,79 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:background="@drawable/tatica"
         android:text="Main Menu"
         android:textAllCaps="true"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="#FFFFFF"
+        android:textColor="#070707"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button_Practice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="312dp"
-        android:layout_marginRight="312dp"
-        android:layout_marginBottom="4dp"
+        android:layout_width="125dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
         android:text="Practice"
         app:backgroundTint="#4CAF50"
-        app:layout_constraintBottom_toTopOf="@+id/button_Tatics"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="103dp" />
 
     <Button
         android:id="@+id/button_Scout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="320dp"
-        android:layout_marginRight="320dp"
-        android:layout_marginBottom="76dp"
+        android:layout_width="125dp"
+        android:layout_height="67dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
         android:text="Scout"
         app:backgroundTint="#4CAF50"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="103dp" />
 
     <Button
         android:id="@+id/button_Tatics"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="320dp"
-        android:layout_marginRight="320dp"
-        android:layout_marginBottom="12dp"
+        android:layout_width="125dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
         android:text="Tatics"
         app:backgroundTint="#4CAF50"
-        app:layout_constraintBottom_toTopOf="@+id/button_Market"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="170dp" />
 
     <Button
         android:id="@+id/button_Squad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="320dp"
-        android:layout_marginRight="320dp"
-        android:layout_marginBottom="12dp"
+        android:layout_width="125dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
         android:text="Squad"
         app:backgroundTint="#4CAF50"
-        app:layout_constraintBottom_toTopOf="@+id/button_Scout"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="237dp" />
 
     <Button
         android:id="@+id/button_Market"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="316dp"
-        android:layout_marginRight="316dp"
-        android:layout_marginBottom="4dp"
+        android:layout_width="125dp"
+        android:layout_height="67dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
         android:text="Market"
         app:backgroundTint="#4CAF50"
-        app:layout_constraintBottom_toTopOf="@+id/button_Squad"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="170dp" />
 
     <Button
         android:id="@+id/button_League"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="320dp"
-        android:layout_marginLeft="320dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="125dp"
+        android:layout_height="67dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="104dp"
         android:text="League"
         app:backgroundTint="#4CAF50"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_Scout"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
