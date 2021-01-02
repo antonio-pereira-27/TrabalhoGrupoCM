@@ -40,7 +40,7 @@ class LoginActivity : AppCompatActivity() {
                         // atualiza o UI(utilizador)
                         //val user = authentication.currentUser
                         //falta o if para verificar se o utilizador ja tem uma equipa
-                        val intent = Intent(this, MainMenu::class.java)
+                        val intent = Intent(this, ChooseTeamActivity::class.java)
                         startActivity(intent)
                     } else {
                         // o login deu erro, é necessário atirar uma exceção
