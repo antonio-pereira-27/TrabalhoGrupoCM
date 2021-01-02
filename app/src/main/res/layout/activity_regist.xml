@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/creataccount"
     tools:context=".RegistActivity">
 
     <EditText
@@ -15,7 +16,7 @@
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.393"
+        app:layout_constraintHorizontal_bias="0.98"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
@@ -26,10 +27,10 @@
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.27"
+        app:layout_constraintHorizontal_bias="0.673"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNewEmail"
-        app:layout_constraintVertical_bias="0.211" />
+        app:layout_constraintVertical_bias="0.209" />
 
     <EditText
         android:id="@+id/editTextConfirmPassword"
@@ -39,17 +40,22 @@
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.27"
+        app:layout_constraintHorizontal_bias="0.673"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNewPassword"
-        app:layout_constraintVertical_bias="0.33" />
+        app:layout_constraintVertical_bias="0.455" />
 
     <Button
         android:id="@+id/buttonNewRegist"
         android:layout_width="124dp"
         android:layout_height="65dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginLeft="72dp"
+        android:layout_marginBottom="60dp"
+        android:background="#FFFFFF"
         android:text="Regist"
-        tools:layout_editor_absoluteX="555dp"
-        tools:layout_editor_absoluteY="317dp" />
+        app:backgroundTint="#3C3F41"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
