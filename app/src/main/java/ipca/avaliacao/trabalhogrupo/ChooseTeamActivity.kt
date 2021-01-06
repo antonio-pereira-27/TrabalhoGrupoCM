@@ -40,13 +40,9 @@ class ChooseTeamActivity : AppCompatActivity() {
             } else {
                 val jsonObject = JSONObject(result)
 
-                val jsonObjectResult = (jsonObject.get("api"))
+                val jsonObjectResult : JSONObject = jsonObject.get("api") as JSONObject
                 if (jsonObject.getJSONObject("api").getInt("results")!= 0) {
-                    Log.e("pedro", jsonObject.toString())
-                    runOnUiThread {
-                        Toast.makeText(this@ChooseTeamActivity, "Sem internet!", Toast.LENGTH_LONG).show()
-                    }
-                    var jsonArray: JSONArray = jsonObject.getJSONArray("teams")
+                    var jsonArray: JSONArray = jsonObjectResult.getJSONArray("teams")
                     for (index in 0 until jsonArray.length()) {
                         val jsonTeam = jsonArray.getJSONObject(index)
                         val team = Team.fromJson(jsonTeam)

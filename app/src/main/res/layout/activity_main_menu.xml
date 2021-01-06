@@ -28,21 +28,25 @@
         android:layout_height="67dp"
         android:layout_marginStart="100dp"
         android:layout_marginLeft="100dp"
+        android:layout_marginTop="57dp"
         android:text="Practice"
         app:backgroundTint="#4CAF50"
+        app:layout_constraintBottom_toTopOf="@+id/button_Tatics"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="103dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_MainMenu" />
 
     <Button
         android:id="@+id/button_Scout"
         android:layout_width="125dp"
         android:layout_height="67dp"
+        android:layout_marginTop="103dp"
         android:layout_marginEnd="100dp"
         android:layout_marginRight="100dp"
         android:text="Scout"
         app:backgroundTint="#4CAF50"
+        app:layout_constraintBottom_toTopOf="@+id/button_Market"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="103dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button_Tatics"
@@ -52,8 +56,9 @@
         android:layout_marginLeft="100dp"
         android:text="Tatics"
         app:backgroundTint="#4CAF50"
+        app:layout_constraintBottom_toTopOf="@+id/button_Squad"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="170dp" />
+        app:layout_constraintTop_toBottomOf="@+id/button_Practice" />
 
     <Button
         android:id="@+id/button_Squad"
@@ -61,10 +66,12 @@
         android:layout_height="67dp"
         android:layout_marginStart="100dp"
         android:layout_marginLeft="100dp"
+        android:layout_marginBottom="107dp"
         android:text="Squad"
         app:backgroundTint="#4CAF50"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="237dp" />
+        app:layout_constraintTop_toBottomOf="@+id/button_Tatics" />
 
     <Button
         android:id="@+id/button_Market"
@@ -72,21 +79,25 @@
         android:layout_height="67dp"
         android:layout_marginEnd="100dp"
         android:layout_marginRight="100dp"
+        android:layout_marginBottom="3dp"
         android:text="Market"
         app:backgroundTint="#4CAF50"
+        app:layout_constraintBottom_toTopOf="@+id/button_League"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="170dp" />
+        app:layout_constraintTop_toBottomOf="@+id/button_Scout" />
 
     <Button
         android:id="@+id/button_League"
         android:layout_width="125dp"
         android:layout_height="67dp"
+        android:layout_marginTop="3dp"
         android:layout_marginEnd="100dp"
         android:layout_marginRight="100dp"
         android:layout_marginBottom="104dp"
         android:text="League"
         app:backgroundTint="#4CAF50"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_Market" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

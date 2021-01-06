@@ -31,9 +31,9 @@ class Beckend {
 
 
             val response = client.newCall(request).execute()
-            Log.e("teste", response.body()?.string().toString())
-            val stream = response.body()?.string()
 
+            var  stream : String? = response.body()?.string().toString()
+            Log.e("teste",stream?:"")
             if (stream != null) {
                 result = stream
             }
