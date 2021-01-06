@@ -81,6 +81,12 @@ class ChooseTeamActivity : AppCompatActivity() {
 
             rowView.isClickable = true
             rowView.setOnClickListener{
+                // guardar definições do utilizador para a equipa
+                val preferencesHelper = PreferencesHelper(this@ChooseTeamActivity)
+                preferencesHelper.prefChooseTeam
+                preferencesHelper.prefTeam = teams[position].nome
+                preferencesHelper.savePreferences()
+                //passar para o main menu
                 val intent = Intent(this@ChooseTeamActivity, MainMenu::class.java)
                 startActivity(intent)
             }

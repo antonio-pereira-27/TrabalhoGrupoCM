@@ -37,11 +37,22 @@ class LoginActivity : AppCompatActivity() {
                     {
                         // login feito com sucesso, atualiza o UI da aplicação com o utilizador que se autenticou
                         Log.d(TAG, "Login with email: Successful")
-                        // atualiza o UI(utilizador)
-                        //val user = authentication.currentUser
-                        //falta o if para verificar se o utilizador ja tem uma equipa
-                        val intent = Intent(this, ChooseTeamActivity::class.java)
-                        startActivity(intent)
+
+                        // guarda o email do utilizador
+                        val preferencesHelper = PreferencesHelper(this@LoginActivity)
+                        preferencesHelper.prefEmail = email.text.toString()
+                        preferencesHelper.savePreferences()
+
+                        // verifica se tem ou não equipa
+                        if (preferencesHelper.prefTeam == ""){
+                            val intent = Intent(this, ChooseTeamActivity::class.java)
+                            startActivity(intent)
+                        }
+                        else{
+                            val intent = Intent(this, MainMenu::class.java)
+                            startActivity(intent)
+                        }
+
                     } else {
                         // o login deu erro, é necessário atirar uma exceção
                         Log.w(TAG, " Login with email : Fail", task.exception)
