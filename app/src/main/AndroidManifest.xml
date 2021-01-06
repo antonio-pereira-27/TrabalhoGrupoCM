@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ipca.avaliacao.trabalhogrupo">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -10,12 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TrabalhoGrupo">
-        <activity android:name=".ChooseTeamActivity"
-            android:screenOrientation="landscape">
-
-        </activity>
-        <activity android:name=".Squad"
-            android:screenOrientation="landscape"/>
+        <activity android:name=".LeagueActivity"></activity>
+        <activity android:name=".ScoutActivity" />
+        <activity android:name=".MarketActivity" />
+        <activity android:name=".TaticsActivity" />
+        <activity
+            android:name=".ChooseTeamActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Squad"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".Practice"
             android:screenOrientation="landscape" />

@@ -27,5 +27,25 @@ class MainMenu : AppCompatActivity() {
             val intent = Intent(this, Squad::class.java)
             startActivity(intent)
         }
+
+        taticsButton.setOnClickListener {
+            val intent = Intent(this, TaticsActivity::class.java)
+            startActivity(intent)
+        }
+
+        marketButton.setOnClickListener {
+            val intent = Intent(this, MarketActivity::class.java)
+            startActivity(intent)
+        }
+
+        scoutButton.setOnClickListener {
+            val intent = Intent(this, ScoutActivity::class.java)
+            startActivity(intent)
+        }
+        
+        leagueButton.setOnClickListener {
+            val intent = Intent(this, LeagueActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
