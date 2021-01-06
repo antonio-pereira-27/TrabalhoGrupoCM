@@ -40,9 +40,9 @@ class ChooseTeamActivity : AppCompatActivity() {
             } else {
                 val jsonObject = JSONObject(result)
 
-                val jsonObjectResult = JSONObject(jsonObject.get("api").toString())
-                if (jsonObjectResult.get("results") != 0) {
-                    Log.e("colhoes", jsonObject.toString())
+                val jsonObjectResult = (jsonObject.get("api"))
+                if (jsonObject.getJSONObject("api").getInt("results")!= 0) {
+                    Log.e("pedro", jsonObject.toString())
                     runOnUiThread {
                         Toast.makeText(this@ChooseTeamActivity, "Sem internet!", Toast.LENGTH_LONG).show()
                     }
