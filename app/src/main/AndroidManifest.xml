@@ -11,10 +11,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TrabalhoGrupo">
-        <activity android:name=".LeagueActivity"></activity>
-        <activity android:name=".ScoutActivity" />
-        <activity android:name=".MarketActivity" />
-        <activity android:name=".TaticsActivity" />
+        <activity
+            android:name=".LeagueActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ScoutActivity"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".MarketActivity"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".TaticsActivity"
+            android:screenOrientation="landscape"/>
         <activity
             android:name=".ChooseTeamActivity"
             android:screenOrientation="landscape" />

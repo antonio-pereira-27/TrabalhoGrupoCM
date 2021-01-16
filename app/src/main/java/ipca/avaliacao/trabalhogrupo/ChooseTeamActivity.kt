@@ -29,7 +29,7 @@ class ChooseTeamActivity : AppCompatActivity() {
         teamsAdapter = TeamsAdapter()
         listViewTeams.adapter = teamsAdapter
 
-        teams.add(Team(1,"teste", "teste","teste","teste","teste",1))
+
 
          GlobalScope.async{
             var result = Beckend.getTeams()
