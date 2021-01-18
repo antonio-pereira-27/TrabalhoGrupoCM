@@ -3,7 +3,6 @@ package ipca.avaliacao.trabalhogrupo
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
@@ -75,9 +74,14 @@ class ChooseTeamActivity : AppCompatActivity() {
 
             val textViewTeamName = rowView.findViewById<TextView>(R.id.textViewTeamName)
             val textViewCountry = rowView.findViewById<TextView>(R.id.textViewCountry)
+            val textViewCity = rowView.findViewById<TextView>(R.id.textViewCity)
+            val textViewStadium = rowView.findViewById<TextView>(R.id.textViewStadium)
 
             textViewTeamName.text = teams[position].nome
             textViewCountry.text = teams[position].pais
+            textViewCity.text = teams[position].cidade
+            textViewStadium.text = teams[position].nomeEstadio
+
 
             rowView.isClickable = true
             rowView.setOnClickListener{
@@ -85,6 +89,7 @@ class ChooseTeamActivity : AppCompatActivity() {
                 val preferencesHelper = PreferencesHelper(this@ChooseTeamActivity)
                 preferencesHelper.prefChooseTeam
                 preferencesHelper.prefTeam = teams[position].nome
+                preferencesHelper.prefCodigo = teams[position].codigo
                 preferencesHelper.savePreferences()
                 //passar para o main menu
                 val intent = Intent(this@ChooseTeamActivity, MainMenu::class.java)

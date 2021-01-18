@@ -7,10 +7,12 @@
 
     <TextView
         android:id="@+id/textViewTeamName"
-        android:layout_width="114dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="5dp"
         android:text="Team0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,35 +21,35 @@
 
     <TextView
         android:id="@+id/textViewCountry"
-        android:layout_width="143dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="4dp"
         android:text="Country"
         app:layout_constraintStart_toEndOf="@+id/textViewTeamName"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewBudget"
-        android:layout_width="183dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="228dp"
-        android:layout_marginLeft="228dp"
-        android:layout_marginTop="8dp"
-        android:text="BUDGET: 10000000€"
+        android:id="@+id/textViewCity"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="4dp"
+        android:text="League"
         app:layout_constraintStart_toEndOf="@+id/textViewCountry"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewLeague"
-        android:layout_width="159dp"
-        android:layout_height="29dp"
-        android:layout_marginTop="8dp"
-        android:text="League"
-        app:layout_constraintEnd_toStartOf="@+id/textViewBudget"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toEndOf="@+id/textViewCountry"
+        android:id="@+id/textViewStadium"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="4dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/textViewCity"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,29 +7,30 @@ class Players {
     var posicao: String? = null
     var pontuacao: Int? = null
     var idade: Int? = null
-    var condFisica: Int? = null
-
+    var altura: String? = null
+    var peso: String? = null
 
     constructor(){
     }
 
-    constructor(nome: String?, posicao: String?, pontuacao: Int?, idade: Int?, condFisica: Int?) {
+    constructor(nome: String?, posicao: String?, pontuacao: Int?, idade: Int?, altura: String?, peso: String?) {
         this.nome = nome
         this.posicao = posicao
         this.pontuacao = pontuacao
         this.idade = idade
-        this.condFisica = condFisica
+        this.altura = altura
+        this.peso = peso
     }
 
     companion object{
         fun fromJson(jsonObject: JSONObject):Players{
             var player = Players()
 
-            player.nome = jsonObject.getString("name")
-            player.posicao = jsonObject.getString("country")
-            player.pontuacao = jsonObject.getInt("")
-            player.idade = jsonObject.getInt("")
-            player.condFisica = jsonObject.getInt("")
+            player.nome = jsonObject.getString("player_name")
+            player.posicao = jsonObject.getString("position")
+            player.idade = jsonObject.getInt("age")
+            player.altura = jsonObject.getString("height")
+            player.peso = jsonObject.getString("weight")
 
             return player
         }

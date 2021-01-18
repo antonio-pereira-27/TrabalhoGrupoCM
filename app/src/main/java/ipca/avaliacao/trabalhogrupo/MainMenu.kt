@@ -13,9 +13,7 @@ class MainMenu : AppCompatActivity() {
         // variáveis de botões
         val practiceButton = findViewById<Button>(R.id.button_Practice)
         val taticsButton = findViewById<Button>(R.id.button_Tatics)
-        val marketButton = findViewById<Button>(R.id.button_Market)
         val squadButton = findViewById<Button>(R.id.button_Squad)
-        val scoutButton = findViewById<Button>(R.id.button_Scout)
         val leagueButton = findViewById<Button>(R.id.button_League)
 
         practiceButton.setOnClickListener {
@@ -33,15 +31,6 @@ class MainMenu : AppCompatActivity() {
             startActivity(intent)
         }
 
-        marketButton.setOnClickListener {
-            val intent = Intent(this, MarketActivity::class.java)
-            startActivity(intent)
-        }
-
-        scoutButton.setOnClickListener {
-            val intent = Intent(this, ScoutActivity::class.java)
-            startActivity(intent)
-        }
         
         leagueButton.setOnClickListener {
             val intent = Intent(this, LeagueActivity::class.java)
