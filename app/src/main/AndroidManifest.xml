@@ -15,12 +15,6 @@
             android:name=".LeagueActivity"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".ScoutActivity"
-            android:screenOrientation="landscape"/>
-        <activity
-            android:name=".MarketActivity"
-            android:screenOrientation="landscape"/>
-        <activity
             android:name=".TaticsActivity"
             android:screenOrientation="landscape"/>
         <activity
