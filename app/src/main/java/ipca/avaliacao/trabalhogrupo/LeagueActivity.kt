@@ -69,7 +69,7 @@ class LeagueActivity : AppCompatActivity() {
         }
 
         override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-            val rowView = layoutInflater.inflate(R.layout.roll_teams, parent,false)
+            val rowView = layoutInflater.inflate(R.layout.roll_league_teams, parent,false)
 
             val textViewTeamName = rowView.findViewById<TextView>(R.id.textViewLeagueTeamName)
             val textViewPosition = rowView.findViewById<TextView>(R.id.textViewPosition)
@@ -78,7 +78,6 @@ class LeagueActivity : AppCompatActivity() {
             val textViewPontos = rowView.findViewById<TextView>(R.id.textViewPontos)
 
             textViewTeamName.text = teams[position].nome
-            textViewPosition.text = teams[position].toString()
             textViewGolosMarcados.text = "0"
             textViewGolosSofridos.text = "0"
             textViewPontos.text = "0"
