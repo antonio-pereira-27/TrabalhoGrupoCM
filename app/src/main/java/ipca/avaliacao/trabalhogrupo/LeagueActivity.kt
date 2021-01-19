@@ -69,6 +69,10 @@ class LeagueActivity : AppCompatActivity() {
         }
 
         override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
+
+            var contador = 1
+            var auxiliar = 0
+
             val rowView = layoutInflater.inflate(R.layout.roll_league_teams, parent,false)
 
             val textViewTeamName = rowView.findViewById<TextView>(R.id.textViewLeagueTeamName)
@@ -81,14 +85,11 @@ class LeagueActivity : AppCompatActivity() {
             textViewGolosMarcados.text = "0"
             textViewGolosSofridos.text = "0"
             textViewPontos.text = "0"
-
-
-
-            //rowView.isClickable = true
-            //rowView.setOnClickListener{
-
-            //}
-
+            for (i in 0..teams.size)
+            {
+                auxiliar++
+                textViewPosition.text = auxiliar.toString()
+            }
             return rowView
         }
     }

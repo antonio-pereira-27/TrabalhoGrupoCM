@@ -31,7 +31,7 @@ class Players {
             player.idade = jsonObject.getInt("age")
             player.altura = jsonObject.getString("height")
             player.peso = jsonObject.getString("weight")
-
+            player.pontuacao = 50
             return player
         }
     }

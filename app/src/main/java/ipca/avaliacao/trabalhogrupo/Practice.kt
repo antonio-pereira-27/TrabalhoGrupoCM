@@ -3,6 +3,7 @@ package ipca.avaliacao.trabalhogrupo
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
@@ -18,11 +19,23 @@ class Practice : AppCompatActivity() {
 
     var players : MutableList<Players> = ArrayList()
     lateinit var playersAdapter : PlayersAdapter
+    var counter = 0
+    var isPractice = false
+    var player = Players()
+    lateinit var textViewPlayerName: TextView
+    lateinit var textViewPlayerAge: TextView
+    lateinit var textViewPlayerPosition: TextView
+    lateinit var textViewPlayerScore: TextView
+    var i = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_practice)
 
+        textViewPlayerName = findViewById<TextView>(R.id.textViewPlayerName)
+        textViewPlayerAge = findViewById<TextView>(R.id.textViewPlayerAge)
+        textViewPlayerPosition = findViewById<TextView>(R.id.textViewPlayerPosition)
+        textViewPlayerScore = findViewById<TextView>(R.id.textViewScore)
 
         val listViewPlayers = findViewById<ListView>(R.id.listViewPratice)
         playersAdapter = PlayersAdapter()
@@ -55,6 +68,30 @@ class Practice : AppCompatActivity() {
             }
 
         }
+
+
+    }
+
+    fun startTimeCounter(view: View){
+        val countTime = findViewById<TextView>(R.id.textViewCountTime)
+
+        object : CountDownTimer(10000, 1000)
+        {
+            override fun onTick(millisUntilFinished: Long) {
+                countTime.text = counter.toString()
+                counter++
+                isPractice = true
+            }
+
+            override fun onFinish() {
+                countTime.text = "Treino Acabou!"
+                isPractice = false
+                player.pontuacao = player.pontuacao?.plus(5)
+                players[i] = player
+                textViewPlayerScore.text = player.pontuacao.toString()
+                playersAdapter.notifyDataSetChanged()
+            }
+        }.start()
     }
 
     inner class PlayersAdapter : BaseAdapter(){
@@ -78,10 +115,7 @@ class Practice : AppCompatActivity() {
             val textViewPlayerPosicao = rowView.findViewById<TextView>(R.id.textViewPlayerPosicao)
             val textViewPlayerAltura = rowView.findViewById<TextView>(R.id.textViewPlayerAltura)
             val textViewPlayerPeso = rowView.findViewById<TextView>(R.id.textViewPlayerPeso)
-            val textViewPlayerName = findViewById<TextView>(R.id.textViewPlayerName)
-            val textViewPlayerAge = findViewById<TextView>(R.id.textViewPlayerAge)
-            val textViewPlayerPosition = findViewById<TextView>(R.id.textViewPlayerPosition)
-            val textViewPlayerScore = findViewById<TextView>(R.id.textViewScore)
+
 
 
             textViewPlayerNome.text = players[position].nome
@@ -90,14 +124,24 @@ class Practice : AppCompatActivity() {
             textViewPlayerAltura.text = players[position].altura
             textViewPlayerPeso.text = players[position].peso
 
+            if (isPractice == false)
+            {
+                rowView.isClickable = true
+                rowView.setOnClickListener{
+                    player.nome = players[position].nome
+                    player.idade = players[position].idade
+                    player.posicao = players[position].posicao
+                    player.pontuacao = players[position].pontuacao
 
-            rowView.isClickable = true
-            rowView.setOnClickListener{
-                textViewPlayerName.text = textViewPlayerNome.text
-                textViewPlayerAge.text = textViewPlayerIdade.text.toString()
-                textViewPlayerPosition.text = textViewPlayerPosicao.text
+                    textViewPlayerName.text = player.nome
+                    textViewPlayerAge.text = player.altura
+                    textViewPlayerPosition.text = player.posicao
+                    textViewPlayerScore.text = player.pontuacao.toString()
+
+                    i = position
+
+                }
             }
-
             return rowView
         }
     }
