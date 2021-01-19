@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/tatica"
+    android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
     tools:context=".TaticsActivity">
 
     <TextView
@@ -26,11 +26,11 @@
 
     <TextView
         android:id="@+id/textViewPressao"
-        android:layout_width="170dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginRight="76dp"
+        android:layout_width="289dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
         android:text="Pressão"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="#B10101"
@@ -94,8 +94,8 @@
         android:id="@+id/seekBarEstiloAtaque"
         android:layout_width="140dp"
         android:layout_height="30dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginLeft="84dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginLeft="144dp"
         android:max="100"
         android:min="0"
         android:scrollbarSize="6dp"
@@ -103,21 +103,21 @@
         app:layout_constraintBottom_toTopOf="@+id/textViewAgressividade"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewEstiloAtaque"
-        app:layout_constraintVertical_bias="0.105"
+        app:layout_constraintVertical_bias="0.25"
         app:tickMarkTint="#B10101" />
 
     <SeekBar
         android:id="@+id/seekBarPressao"
         android:layout_width="124dp"
         android:layout_height="17dp"
-        android:layout_marginEnd="96dp"
-        android:layout_marginRight="96dp"
+        android:layout_marginEnd="144dp"
+        android:layout_marginRight="144dp"
         android:max="100"
         android:min="0"
         app:layout_constraintBottom_toTopOf="@+id/textViewMaracacao"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewPressao"
-        app:layout_constraintVertical_bias="0.13" />
+        app:layout_constraintVertical_bias="0.149" />
 
     <SeekBar
         android:id="@+id/seekBarNivelAgressividade"
@@ -131,6 +131,7 @@
         android:min="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/textViewMaracacao"
+        app:layout_constraintHorizontal_bias="0.19"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewAgressividade"
         app:layout_constraintVertical_bias="0.13" />

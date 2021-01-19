@@ -85,11 +85,7 @@ class LeagueActivity : AppCompatActivity() {
             textViewGolosMarcados.text = "0"
             textViewGolosSofridos.text = "0"
             textViewPontos.text = "0"
-            for (i in 0..teams.size)
-            {
-                auxiliar++
-                textViewPosition.text = auxiliar.toString()
-            }
+            textViewPosition.text = position.plus(1).toString()
             return rowView
         }
     }
