@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/treino"
+    android:background="@drawable/common_google_signin_btn_text_light_focused"
     tools:context=".Practice">
 
     <ImageView
@@ -19,135 +19,68 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@drawable/ic_baseline_home_24" />
 
-    <ImageView
-        android:id="@+id/imageView_Player1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView_Player2"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <ImageView
-        android:id="@+id/imageView_Player2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView_Player3"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <ImageView
-        android:id="@+id/imageView_Player3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView_Player4"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <ImageView
-        android:id="@+id/imageView_Player4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginRight="56dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
-
     <TextView
-        android:id="@+id/textView_Player1Name"
-        android:layout_width="120dp"
-        android:layout_height="17dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
-        android:text="Name1"
-        app:layout_constraintEnd_toStartOf="@+id/textView_Player2Name"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_Player1" />
-
-    <TextView
-        android:id="@+id/textView_Player2Name"
-        android:layout_width="127dp"
-        android:layout_height="21dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
-        android:text="Name2"
-        app:layout_constraintEnd_toStartOf="@+id/textView_Player3Name"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_Player2" />
-
-    <TextView
-        android:id="@+id/textView_Player3Name"
-        android:layout_width="131dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
-        android:text="Name3"
-        app:layout_constraintEnd_toStartOf="@+id/textView_Player4Name"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_Player3" />
-
-    <TextView
-        android:id="@+id/textView_Player4Name"
-        android:layout_width="125dp"
-        android:layout_height="23dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginRight="56dp"
-        android:text="Name4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_Player4" />
-
-    <ProgressBar
-        android:id="@+id/progressBar1"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="117dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginLeft="56dp"
-        android:layout_marginTop="32dp"
+        android:id="@+id/textViewPlayerName"
+        android:layout_width="129dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="70dp"
+        android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_Player1Name" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <ProgressBar
-        android:id="@+id/progressBar2"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="117dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintStart_toEndOf="@+id/progressBar1"
-        app:layout_constraintTop_toBottomOf="@+id/textView_Player2Name" />
+    <TextView
+        android:id="@+id/textViewPlayerAge"
+        android:layout_width="129dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="70dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/textViewPlayerName"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <ProgressBar
-        android:id="@+id/progressBar3"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="117dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintStart_toEndOf="@+id/progressBar2"
-        app:layout_constraintTop_toBottomOf="@+id/textView_Player3Name" />
+    <TextView
+        android:id="@+id/textViewPlayerPosition"
+        android:layout_width="129dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="70dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/textViewPlayerAge"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <ProgressBar
-        android:id="@+id/progressBar4"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="117dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintStart_toEndOf="@+id/progressBar3"
-        app:layout_constraintTop_toBottomOf="@+id/textView_Player4Name" />
+    <TextView
+        android:id="@+id/textViewScore"
+        android:layout_width="129dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="70dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/textViewPlayerPosition"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/listViewPratice"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="220dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonPractice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
